@@ -1,0 +1,34 @@
+#!/bin/bash
+
+set -e
+
+encoder_path=`pwd`/../djfv1_encode.pl
+decoder_path=`pwd`/../djfv1_decode.pl
+
+function write_random {
+  dd if=/dev/urandom bs=$1 count=1 of=$2
+}
+
+size=$1
+if ! [[  $size =~ ^[0-9]+$ ]];
+then
+  echo "Usage: $0 <size>"
+  exit 1
+fi
+
+if ! [[ -f $encoder_path || -f $decoder_path ]];
+then
+  echo "Must be run from tests directory of project: encoder or decoder not found."
+  exit 1
+fi
+
+raw_file=$size\_bytes
+encoded_file=$size\_bytes.jif
+decoded_file=$size\_bytes.jf-decoded
+
+write_random $size $raw_file
+perl $encoder_path $raw_file $encoded_file
+time perl $decoder_path $encoded_file $decoded_file
+md5sum $raw_file $decoded_file
+
+rm $raw_file $encoded_file $decoded_file
