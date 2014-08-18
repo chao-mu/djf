@@ -21,7 +21,7 @@ Inter-Office Private Wire Sent
 
 # Format and Implementation
 
-A .jif is composed of a series of sections. Each section is a MD5 hash followed by 7 bytes (referred to as a "chunk"), for a total of 23 bytes. Each chunk corresponds to a chunk of bytes being represented, but sorted numerically (ascending). The MD5 hash is used as a checksum, taken of the bytes in their original order.
+A .jif is composed of a series of sections. Each section is a MD5 hash followed by 7 bytes (referred to as a "chunk"). These chunks are numerically sorted (ascending) 7 byte sequences of the representeddata. The MD5 hash is a checksum of the bytes in their original order.
 
 ## Encoding (Pseudocode)
 
