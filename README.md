@@ -40,6 +40,10 @@ Read each 23 byte section of the encoded file. Split the leading 16 byte checksu
 
 See reference implementation for code example.
 
+# Readers
+
+Currently the only known reader of a .jif is the decoder.
+
 # Pronunciation
 
 While pronunciation of the Dot Jif Format varries, the creator has come out to say publically that it is pronounced as the extension suggests, .jif.
