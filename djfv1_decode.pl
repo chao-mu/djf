@@ -54,13 +54,13 @@ sub crack()
   my $checksum = shift;
 
   my $combos = Algorithm::Permute->new([split('', $encoded_data)]);
-  while (my @canidate_combo = $combos->next())
+  while (my @candidate_combo = $combos->next())
   {
-    my $canidate = join('', @canidate_combo);
+    my $candidate = join('', @candidate_combo);
     
-    if (md5($canidate) eq $checksum)
+    if (md5($candidate) eq $checksum)
     {
-      return $canidate;
+      return $candidate;
     }
   }
 
