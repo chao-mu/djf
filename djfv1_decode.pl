@@ -64,5 +64,5 @@ sub crack()
     }
   }
 
-  die "Something went funky - the bad kind of funky. Are you sure this is a JIF?\n";
+  die "Something went funky - the bad kind of funky. Are you sure this is a DJF?\n";
 }
