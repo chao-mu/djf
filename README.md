@@ -1,7 +1,7 @@
 DJF
 ===
 
-The Dot Jif Format is an Erisian file format based on the Discordian Society Super Secret Cryptographic Cypher Code on page 00071 of the Principia Discordia. It is used to encode all manner of bytes, regardless of their race, color, or creed.
+The Dot Jif Format is an Erisian file format based on the Discordian Society Super Secret Cryptographic Cypher Code on page 00071 of the Principia Discordia. It is used to encode all manner of bytes, whether they be audio, visuals, or audiovisuals.
 
 While the only way of decoding a DJF encoded file is through brute force, the time it takes to decode scales linearly as the data is broken into chunks.
 
